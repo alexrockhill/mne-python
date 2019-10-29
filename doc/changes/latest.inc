@@ -14,6 +14,9 @@ Current (0.20.dev0)
 
 Changelog
 ~~~~~~~~~
+- Add current source density :ref:`compute_current_source_density` to compute the surface Laplacian
+in order to reduce volume conduction in data `Alex Rockhill`_.
+
 - Add command :ref:`gen_mne_setup_source_space` to quickly set up bilateral hemisphere surface-based source space with subsampling by `Victor Ferat`_.
 
 - Add function :func:`mne.make_fixed_length_epochs` to segment raw into fixed length epochs by `Mohammad Daneshzand`_

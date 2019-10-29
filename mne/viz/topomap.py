@@ -46,8 +46,9 @@ def _prepare_topo_plot(inst, ch_type, layout):
     for ii, this_ch in enumerate(info['chs']):
         this_ch['ch_name'] = clean_ch_names[ii]
     info['bads'] = _clean_names(info['bads'])
-    for comp in info['comps']:
-        comp['data']['col_names'] = _clean_names(comp['data']['col_names'])
+    if 'csd' not in info['comps']:  # added for csd 0.20
+        for comp in info['comps']:
+            comp['data']['col_names'] = _clean_names(comp['data']['col_names'])
 
     info._update_redundant()
     info._check_consistency()

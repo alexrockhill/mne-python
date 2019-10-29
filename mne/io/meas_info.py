@@ -2028,6 +2028,9 @@ def _bad_chans_comp(info, ch_names):
         # should this be thought of as a bug?
         return False, []
 
+    if 'csd' in info['comps']:  # added for csd 0.20
+        return True, []
+
     # only include compensation channels that would affect selected channels
     ch_names_s = set(ch_names)
     comp_names = []
